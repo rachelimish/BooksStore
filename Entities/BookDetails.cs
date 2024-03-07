@@ -8,9 +8,8 @@
         public int NumberOfPages { get; set; }
         public int MinAge { get; set; }
         public int MaxAge { get; set; }
-        public bool IsComics { get; set; }
-
-        public BookDetails(int id, string name, int price, int numberOfPages, 
+        public bool IsComics { get; set; }  
+        public BookDetails(int id, string name, int price, int numberOfPages,
             int minAge, int maxAge, bool isComics)
         {
             this.Id = id;
@@ -21,5 +20,6 @@
             this.MaxAge = maxAge;
             this.IsComics = isComics;
         }
+
     }
 }

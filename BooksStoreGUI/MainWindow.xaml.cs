@@ -1,5 +1,7 @@
-﻿using System;
+﻿using BooksStoreBL;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -26,9 +28,18 @@ namespace BooksStoreGUI
             booksStoreBL = new BooksStoreBL.BookStoreBL();
             
             InitializeComponent();
-            var res = booksStoreBL.GetAllBooks();
-            BooksDataGrid.ItemsSource = res;
+            //var res = booksStoreBL.BookExpensive();
+            //BooksDataGrid.ItemsSource = res;
+            //var res1 = booksStoreBL.Arranged();
+            //BooksDataGrid.ItemsSource = res1;
+            //var res2 = booksStoreBL.PriceOfComics();
+            //BooksDataGrid.ItemsSource = res2.Select(x => new { Value = x }).ToList();
+            var res3 = booksStoreBL.BooksSuitableForAge9();
+            BooksDataGrid.ItemsSource = res3.Select(x => new { Value = x }).ToList();
+
 
         }
+
+
     }
 }

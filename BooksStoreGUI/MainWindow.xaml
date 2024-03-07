@@ -7,6 +7,15 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
     <WrapPanel>
-        <DataGrid Name="BooksDataGrid"></DataGrid>
+        <DataGrid x:Name="BooksDataGrid" Height="333" Width="704"  AutoGenerateColumns="True" >
+            <DataGrid.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="-0.018"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </DataGrid.RenderTransform>
+        </DataGrid>
     </WrapPanel>
 </Window>
